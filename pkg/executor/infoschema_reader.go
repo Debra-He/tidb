@@ -640,8 +640,6 @@ func (e *memtableRetriever) setDataFromOneTable(
 		}
 		if table.Encryption {
 			createOptions += "ENCRYPTION='Y'"
-		} else {
-			createOptions += "ENCRYPTION=''"
 		}
 		var autoIncID any
 		hasAutoIncID, _ := infoschema.HasAutoIncrementColumn(table)
